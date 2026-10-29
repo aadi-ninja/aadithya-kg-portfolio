@@ -238,7 +238,7 @@ if (matchMedia('(hover:hover)').matches && !reduce) {
   });
 }
 
-// ===== Contact form: validation + mailto fallback =====
+// ===== Contact form =====
 const form = $('#form');
 const rules = {
   name: v => v.trim().length >= 2 || 'Enter your name.',
@@ -254,12 +254,32 @@ const check = k => {
   return r === true;
 };
 Object.keys(rules).forEach(k => form[k].addEventListener('blur', () => check(k)));
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!Object.keys(rules).map(check).every(Boolean)) return;
-  // No backend: open the visitor's email app. Swap for fetch() to Formspree/Netlify later.
-  const body = `${form.message.value}\n\n— ${form.name.value} (${form.email.value})`;
-  location.href = `mailto:aadithyakg04@gmail.com?subject=${encodeURIComponent(form.subject.value)}&body=${encodeURIComponent(body)}`;
-  $('#status').textContent = 'Opening your email app. If nothing opens, email aadithyakg04@gmail.com directly.';
-  form.reset();
+  const button = form.querySelector('button[type="submit"]');
+  const status = $('#status');
+  button.disabled = true;
+  status.textContent = 'Sending your message...';
+
+  try {
+    const result = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+      })
+    });
+    const data = await result.json();
+    if (!result.ok) throw new Error(data.error || 'Unable to send your message.');
+    status.textContent = data.message;
+    form.reset();
+  } catch (error) {
+    status.textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
 });
