@@ -24,8 +24,11 @@ module.exports = async function handler(request, response) {
 
   const supabaseUrl = process.env.SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!supabaseUrl || !serviceRoleKey) {
-    console.error('Supabase environment variables are not configured.');
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'Portfolio <onboarding@resend.dev>';
+  const toEmail = process.env.RESEND_TO_EMAIL || 'aadithyakg04@gmail.com';
+  if (!supabaseUrl || !serviceRoleKey || !resendApiKey) {
+    console.error('Contact service environment variables are not configured.');
     return response.status(500).json({ error: 'The contact service is not configured.' });
   }
 
@@ -50,6 +53,33 @@ module.exports = async function handler(request, response) {
       const details = await result.text();
       console.error('Supabase contact insert failed:', result.status, details);
       return response.status(502).json({ error: 'Unable to save your message right now.' });
+    }
+
+    const emailResult = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: fromEmail,
+        to: [toEmail],
+        reply_to: values.email.trim(),
+        subject: `Portfolio contact: ${values.subject.trim()}`,
+        text: [
+          `Name: ${values.name.trim()}`,
+          `Email: ${values.email.trim()}`,
+          `Subject: ${values.subject.trim()}`,
+          '',
+          values.message.trim()
+        ].join('\n')
+      })
+    });
+
+    if (!emailResult.ok) {
+      const details = await emailResult.text();
+      console.error('Resend notification failed:', emailResult.status, details);
+      return response.status(502).json({ error: 'Your message was saved, but the notification could not be sent.' });
     }
 
     return response.status(201).json({ message: 'Your message was sent successfully.' });
