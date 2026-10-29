@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aadithya KG | Software Engineer Portfolio</title>
+<meta name="description" content="Aadithya KG – Software Engineer. Python, Java, SQL, React and Node.js. Recipient of the Expeditors Award of Excellence for software development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fonts: Sora (headings) + Montserrat (body and interface text) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
+  <a href="#home" class="logo" aria-label="Aadithya KG home">Aadithya KG</a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#projects">Projects</a><a href="#education">Education</a>
+    
+    <a href="#certifications">Certifications</a><a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hello">Hi, I'm</p>
+      <h1 class="script-name">Aadithya KG</h1>
+      <p class="pill">Software Engineer</p>
+      <p class="typed-line">I build <span id="typed" class="typed"></span><span class="caret"></span></p>
+      <p class="intro">
+        AI &amp; Data Science graduate with hands-on experience in software development,
+        backend engineering, full-stack applications, and AI-powered solutions.
+        Skilled in Python, SQL, React, Node.js, and database integration, with industry
+        experience as a Software Development Engineer Intern at Expeditors.
+        <br><br>
+        I enjoy turning ideas into practical, scalable solutions through clean code,
+        analytical thinking, and modern technologies.
+        <br><br>
+        I'am open to software development and AI engineering opportunities.
+      </p>
+      <div class="btns">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <button type="button" class="btn ghost">Download Resume</button>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/aadi-ninja" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#contact" id="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" title="[Add LinkedIn URL]"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#email-modal" id="email-trigger" aria-label="Show email options"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#phone-modal" id="phone-trigger" aria-label="Show phone options"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/profile.jpeg" alt="Aadithya KG">
+    </div>
+    <!-- Animated git log: built from real milestones, oldest to newest -->
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i><span>~/aadithya — git log</span></div>
+      <pre id="gitlog"></pre>
+    </div>
+  </div>
+  <a href="#about" class="scroll" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat reveal"><b data-count="1">0</b><span>Award of Excellence</span></div>
+  <div class="stat reveal"><b data-count="4">0</b><span>Hackathons</span></div>
+  <div class="stat reveal"><b data-count="8">0</b><span>Featured projects</span></div>
+  <div class="stat reveal"><b data-count="7">0</b><span>Certifications</span></div>
+</section>
+
+<!-- SKILLS (only what your resume and projects support) -->
+<section id="skills" class="sec">
+  <h2 class="reveal">Technical skills</h2>
+  <div class="skill-groups">
+    <div class="sg reveal"><h3>Programming languages</h3><div class="chips">
+      <span class="chip"><i class="fa-brands fa-python"></i>Python</span>
+      
+      <span class="chip"><i class="fa-brands fa-js"></i>JavaScript</span>
+      <span class="chip"><i class="fa-solid fa-database"></i>SQL</span>
+      </div></div>
+    <div class="sg reveal"><h3>Frontend</h3><div class="chips">
+      <span class="chip"><i class="fa-brands fa-react"></i>React</span>
+      <span class="chip"><i class="fa-solid fa-layer-group"></i>Next.js</span>
+      <span class="chip"><i class="fa-brands fa-angular"></i>Angular</span>
+      <span class="chip"><i class="fa-solid fa-palette"></i>Tailwind CSS</span></div></div>
+    <div class="sg reveal"><h3>Backend and APIs</h3><div class="chips">
+      <span class="chip"><i class="fa-brands fa-node-js"></i>Node.js</span>
+      <span class="chip"><i class="devicon-fastapi-plain"></i>FastAPI</span>
+      <span class="chip"><i class="fa-solid fa-route"></i>Express</span>
+      <span class="chip"><i class="fa-solid fa-plug"></i>REST APIs</span>
+      <span class="chip"><i class="fa-solid fa-key"></i>JWT auth</span>
+      <span class="chip"><i class="fa-solid fa-video"></i>WebRTC</span></div></div>
+    <div class="sg reveal"><h3>Databases</h3><div class="chips">
+      <span class="chip"><i class="fa-solid fa-server"></i>PostgreSQL</span>
+      <span class="chip"><i class="fa-solid fa-leaf"></i>MongoDB</span>
+      <span class="chip"><i class="fa-solid fa-server"></i>MySQL</span>
+      <span class="chip"><i class="fa-solid fa-server"></i>SQL Server</span>
+      <span class="chip"><i class="fa-solid fa-fire"></i>Firebase</span></div></div>
+    <div class="sg reveal"><h3>Tools and platforms</h3><div class="chips">
+      <span class="chip"><i class="fa-brands fa-git-alt"></i>Git</span>
+      <span class="chip"><i class="fa-brands fa-github"></i>GitHub</span>
+      <span class="chip"><i class="fa-solid fa-gears"></i>GitHub Actions</span>
+      <span class="chip"><i class="fa-solid fa-table"></i>Pandas</span></div></div>
+    <div class="sg reveal"><h3>Practices</h3><div class="chips">
+      <span class="chip"><i class="fa-solid fa-broom"></i>Clean coding</span>
+      <span class="chip"><i class="fa-solid fa-code-branch"></i>Version control</span>
+      <span class="chip"><i class="fa-solid fa-diagram-project"></i>ETL pipelines</span>
+      <span class="chip"><i class="fa-solid fa-robot"></i>LLM integration</span></div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="sec">
+  <h2 class="reveal">Experience and internship</h2>
+  <div class="timeline">
+    <article class="tl-item reveal">
+      <span class="dot"></span>
+      <div class="card">
+        <span class="date">Dec 2025 – Feb 2026 · 2 months · Chennai, India</span>
+        <h3>Software Development Engineer Intern</h3>
+        <p class="company">Expeditors</p>
+        <ul>
+          <li>Developed a Python ETL pipeline using PyMuPDF and regex to extract, validate, and normalize data from <span class="impact-highlight">1000+</span> Bill of Entry (BOE) PDFs monthly, replacing an Excel macro/script-based workflow with Python automation and PostgreSQL storage.</li>
+          <li>Built an Angular-based system centralizing <span class="impact-highlight">3 request types</span> — New Requests, Change Requests, and Bug Fixes — with dynamic forms, approval workflows, status tracking, collaborative comments, and WSJF-based prioritization to improve request visibility and prioritization.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>PostgreSQL</span><span>Angular</span><span>Microsoft SQL Server</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="sec">
+  <h2 class="reveal">Achievements</h2>
+  <div class="award reveal">
+    <div class="show" data-dir="assets/award" data-ext="jpeg" data-n="3"><span class="ph"></span></div>
+    <div>
+      <i class="fa-solid fa-trophy"></i>
+      <h3>Award of Excellence – Software Development</h3>
+      <p class="company">Expeditors · January 2026</p>
+      <p>Recognised by Expeditors' Global Technology Team (Middle East, Africa and Indian Subcontinent) for outstanding contributions and dedication on two application development projects during my internship.</p>
+    </div>
+  </div>
+  <div class="grid two">
+    <article class="card hack tilt reveal ar-l no-arrows">
+      <i class="fa-solid fa-medal"></i>
+      <h3>Smart India Hackathon 2024: Top 10 Innovative Idea</h3>
+      <p>Team Neuronauts designed an AR indoor navigation app for railway stations, integrated with the IRCTC portal. Ranked among the Top 10 ideas in the internal round at Sri Venkateswara College of Engineering.</p>
+      <span class="date">10–11 Sept 2024</span>
+    </article>
+    <article class="card hack tilt reveal">
+      <i class="fa-solid fa-pen-ruler"></i>
+      <h3>Hackerrupt Hackathon: Best UI Award</h3>
+      <p>Built a full-stack Student–Teacher Interactive Study Portal for real-time collaboration. The interface won Best UI Design among 20+ teams.</p>
+    </article>
+    
+  </div>
+</section>
+
+<!-- PROJECTS: slideshow photos go in assets/<name>/1.jpg, 2.jpg, 3.jpg. Clicking a slideshow opens its link. -->
+<section id="projects" class="sec">
+  <h2 class="reveal">Featured projects</h2>
+  <div class="tabs reveal" role="tablist"><button class="tab on" data-tab="personal">Personal</button><button class="tab" data-tab="hackathon">Hackathon</button><button class="tab" data-tab="internship">Internship</button></div>
+  <div class="grid proj-grid" id="tab-personal">
+    <article class="card proj tilt reveal">
+      <i class="fa-solid fa-dumbbell"></i>
+      <h3>MetaFit AI: Fitness Plan Coach</h3>
+      <p>A voice assistant collects goals, injuries, allergies and diet preferences. Vapi sends structured JSON to a backend that prompts Gemini for a personalized workout and meal plan, stored per user in Convex. Plans appear in sub-second time.</p>
+      <div class="tags"><span>Next.js</span><span>React</span><span>Gemini AI</span><span>Vapi</span><span>Clerk</span><span>Convex</span></div>
+      <div class="links"><a class="project-link" href="https://github.com/aadi-ninja/metafit" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
+      <a class="show" href="https://metafit-pink.vercel.app/" target="_blank" rel="noopener" data-dir="assets/metafit" data-ext="png" data-n="3"><span class="ph"></span><span class="clickme">Click me 👆</span></a>
+    </article>
+    <article class="card proj tilt reveal">
+      <i class="fa-solid fa-video"></i>
+      <h3>Lyvio: Real-Time Chat and Video Calls</h3>
+      <p>Full-stack platform with one-to-one and group video calls, screen sharing, typing indicators, reactions and presence. JWT auth, a friend system and 32 themes. Tested with 10+ simultaneous users at under 200 ms latency.</p>
+      <div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>WebRTC</span><span>Stream Chat</span></div>
+      <div class="links"><a class="project-link" href="https://github.com/aadi-ninja/lyvio-video-calls" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></div>
+      <a class="show" href="https://lyvio-kg.onrender.com/signup" target="_blank" rel="noopener" data-dir="assets/lyvio" data-ext="png" data-n="3"><span class="ph"></span><span class="clickme">Click me 👆</span></a>
+    </article>
+  </div>
+  <div class="grid proj-grid" id="tab-hackathon" hidden>
+    <article class="card proj tilt reveal no-arrows">
+      <i class="fa-solid fa-train"></i>
+      <h3>AR Indoor Railway Navigation</h3>
+      <p>Smart India Hackathon 2024. Augmented reality wayfinding for railway stations with IRCTC schedule integration. QR scans re-centre the AR session and NavMesh draws the route. Cut navigation time by 15% in testing and frame drops by 20% on Android devices.</p>
+      <div class="tags"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>NavMesh</span><span>Firebase</span></div>
+      
+    </article>
+    <article class="card proj tilt reveal">
+      <i class="fa-solid fa-code"></i>
+      <h3>GDSC Hackathon: AI-Powered Coding Assistant Web App</h3>
+      <p>Google Developer Student Clubs (GDSC) Hackathon. Context-aware suggestions, step-by-step debugging help and multi-language support through NLP.</p>
+      <div class="tags"><span>AI</span><span>NLP</span><span>Web App</span></div>
+      <div class="links"><a class="project-link" href="https://github.com/aadi-ninja/NEOX-AI.git" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a><a href="https://neox-ai.vercel.app/" target="_blank" rel="noopener">Live ↗</a></div>
+      
+    </article>
+    <article class="card proj tilt reveal no-arrows">
+      <i class="fa-solid fa-pen-ruler"></i>
+      <h3>Student–Teacher Interactive Study Portal</h3>
+      <p>Hackerrupt Hackathon, Best UI Award. Full-stack portal for real-time collaboration between students and teachers.</p>
+      <div class="tags">
+         <span>Full-stack</span>
+         <span>Best UI Award</span>
+      </div>
+      
+    </article>
+    <article class="card proj tilt reveal no-arrows">
+      <i class="fa-solid fa-seedling"></i>
+      <h3>Farmer Produce Delivery App</h3>
+      <p>Make-A-Thon 4.0. Mobile app connecting local farmers directly with consumers, with real-time ordering, delivery scheduling and inventory tracking.</p>
+      <div class="tags"><span>Mobile app</span><span>Real-time ordering</span></div>
+      
+    </article>
+  </div>
+  <div class="grid proj-grid" id="tab-internship" hidden>
+    <article class="card proj tilt reveal no-arrows">
+      <i class="fa-solid fa-file-import"></i>
+      <h3>Bill of Entry ETL Pipeline</h3>
+      <p>Internship project at Expeditors. Automatically extracts, validates, normalizes and loads structured data from Bill of Entry PDFs into PostgreSQL.</p>
+      <div class="tags"><span>Python</span><span>PyMuPDF</span><span>Regex</span><span>PostgreSQL</span></div>
+      
+     
+    </article>
+    <article class="card proj tilt reveal no-arrows">
+      <i class="fa-solid fa-diagram-project"></i>
+      <h3>Workflow Management System</h3>
+      <p>Internship project at Expeditors. One place to raise and track New Requests, Change Requests and Bug Fixes, with dynamic forms, approval flows, status tracking, comments and WSJF prioritization.</p>
+      <div class="tags"><span>Angular</span><span>Python</span><span>SQL Server</span></div>
+      
+      
+    </article>
+  </div>
+</section>
+
+
+
+<!-- EDUCATION: school box, line draws down to college; each line draws across to its photos -->
+<section id="education" class="sec">
+  <h2 class="reveal">Education</h2>
+  <div class="edu-wrap">
+    <div class="edu-row reveal">
+      <div class="card edu"><i class="fa-solid fa-school"></i><div>
+        <h3>HSC-XII</h3><p>Swamy's Matriculation Higher Secondary School, Chennai</p><p class="date">2021 – 2022 · 84%</p></div></div>
+      <span class="hline"></span>
+      <div class="show" data-dir="assets/school" data-n="3"><span class="ph"></span></div>
+    </div>
+    <span class="vline"></span>
+    <div class="edu-row reveal">
+      <div class="card edu"><i class="fa-solid fa-graduation-cap"></i><div>
+        <h3>B.Tech Artificial Intelligence and Data Science</h3><p>Sri Venkateswara College of Engineering, Sriperumbudur</p><p class="date">Aug 2022 – May 2026 · CGPA 7.01</p></div></div>
+      <span class="hline"></span>
+      <div class="show" data-dir="assets/college" data-n="3"><span class="ph"></span></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- CERTIFICATIONS: replace each PASTE_DRIVE_LINK_HERE with that certificate's Google Drive link -->
+<section id="certifications" class="sec">
+  <h2 class="reveal">Certifications</h2>
+  <div class="grid">
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/13C1Yf0LG-C1keL48JVp1AkWyj3LtpWXU/view?usp=drive_link" target="_blank" rel="noopener"><small>IBM · Coursera · Aug 2024</small><h3>Python for Data Science, AI &amp; Development</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/1CrQuOxfJs8fXlUFxLRpaMW2zSWb7ZuJD/view?usp=sharing" target="_blank" rel="noopener"><small>Udemy · Dec 2024 · 12 hours</small><h3>SQL – MySQL for Data Analytics and Business Intelligence</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/1y4vf2FbT3ny6sVDUn57L23vXDo_HOtTz/view?usp=drive_link" target="_blank" rel="noopener"><small>Great Learning · Jul 2024</small><h3>Python Fundamentals for Beginners</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/1Tpyh-D2tmiKgcj92t2JFflqcA0uJJw4B/view?usp=drive_link" target="_blank" rel="noopener"><small>Infosys Springboard · Jan 2025</small><h3>Project on Git</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/1tk1Au79pCGgOyqZjTb2_9Dlte-FWntvY/view?usp=drive_link" target="_blank" rel="noopener"><small>Infosys Springboard · Jan 2025</small><h3>Mastering Git</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/1npAGJ6HkxDmloZZV8j9052J94zs8cgiF/view?usp=drive_link" target="_blank" rel="noopener"><small>Infosys Springboard · Jan 2025</small><h3>Python Clean Coding</h3></a>
+    <a class="card cert tilt reveal" href="https://drive.google.com/file/d/12eWq_Qn0yUnh0wpChuyf6fNVTw4A4D-t/view?usp=drive_link" target="_blank" rel="noopener"><small>Infosys Springboard · Jan 2025</small><h3>Programming in Python Beginner</h3></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <h2 class="reveal">Let's talk</h2>
+  <div class="contact reveal">
+    <div class="c-info">
+      <p>Open to software engineer roles and new graduate opportunities.</p>
+      <a href="mailto:aadithyakg04@gmail.com"><i class="fa-solid fa-envelope"></i>aadithyakg04@gmail.com</a>
+      <a href="tel:+917305075143"><i class="fa-solid fa-phone"></i>7305075143</a>
+      <a href="https://github.com/aadi-ninja" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>github.com/aadi-ninja</a>
+      <a href="https://www.linkedin.com/in/aadikg" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i>linkedin.com/in/aadikg</a>
+    </div>
+    <form id="form" novalidate>
+      <label for="name">Name</label><input id="name" name="name" autocomplete="name" required>
+      <small class="err" id="e-name"></small>
+      <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
+      <small class="err" id="e-email"></small>
+      <label for="subject">Subject</label><input id="subject" name="subject" required>
+      <small class="err" id="e-subject"></small>
+      <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
+      <small class="err" id="e-message"></small>
+      <button class="btn primary" type="submit">Send message</button>
+      <p class="note" id="status" role="status">Note: a static site cannot send email by itself. This form opens your email app with the message filled in. For direct delivery, connect a form service (Formspree or Netlify Forms) or your own backend.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<div class="email-modal" id="email-modal" role="dialog" aria-modal="true" aria-labelledby="email-modal-title" hidden>
+  <div class="email-modal-card">
+    <button class="email-modal-close" id="email-modal-close" type="button" aria-label="Close email options">&times;</button>
+    <i class="fa-solid fa-envelope email-modal-icon" aria-hidden="true"></i>
+    <h2 id="email-modal-title">Contact me</h2>
+    <p class="email-address" id="email-address">aadithyakg04@gmail.com</p>
+    <div class="email-modal-actions">
+      <button class="btn ghost" id="copy-email" type="button"><i class="fa-regular fa-copy"></i> Copy email</button>
+      <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=aadithyakg04@gmail.com" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i> Open Gmail</a>
+    </div>
+    <p class="email-status" id="email-status" role="status" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="email-modal" id="phone-modal" role="dialog" aria-modal="true" aria-labelledby="phone-modal-title" hidden>
+  <div class="email-modal-card">
+    <button class="email-modal-close" id="phone-modal-close" type="button" aria-label="Close phone options">&times;</button>
+    <i class="fa-solid fa-phone email-modal-icon" aria-hidden="true"></i>
+    <h2 id="phone-modal-title">Phone</h2>
+    <p class="email-address" id="phone-number">+91 73050 75143</p>
+    <div class="email-modal-actions">
+      <button class="btn ghost" id="copy-phone" type="button"><i class="fa-regular fa-copy"></i> Copy number</button>
+    </div>
+    <p class="email-status" id="phone-status" role="status" aria-live="polite"></p>
+  </div>
+</div>
+
+<footer>
+  <p>© <span id="year"></span> Aadithya KG. Built with HTML, CSS and JavaScript.</p>
+</footer>
+<button class="top" id="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="script.js"></script>
+</body>
+</html>
